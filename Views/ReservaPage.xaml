@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CanchaFacilMovil.Views.ReservaPage"
+             Title="Reserva">
+    <VerticalStackLayout Spacing="10" Margin="5">
+        <Editor x:Name="TextEditor"
+                Placeholder="Ingresa el nombre de la reserva"
+                Text="{Binding Text}"
+                HeightRequest="20" />
+        <Editor x:Name="TextEditor1"
+                Placeholder="Ingrese la cancha de la reserva"
+                Text="{Binding Cancha}"
+                HeightRequest="20" />
+        <Editor x:Name="TextEditor2"
+                Placeholder="Ingrese el deporte de la reserva"
+                Text="{Binding Deporte}"
+                HeightRequest="20" />
+
+        <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
+            <Button Text="Save"
+                    Clicked="SaveButton_Clicked" />
+
+            <Button Grid.Column="1"
+                    Text="Delete"
+                    Clicked="DeleteButton_Clicked" />
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
